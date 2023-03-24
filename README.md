@@ -1,2 +1,2 @@
-# Angular-Recette
-Un site de recette en angular
+# angular recipe
+website recipe using angular
