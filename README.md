@@ -14,5 +14,5 @@ ng serve
 
 Autors :
 
-- Fulconis Yan, *Marth Main and appentice developer*
+- Fulconis Yan, *Marth Main and apprentice developer*
 - Costa Cunha Ivo, *Main brain and confirmed developer*
