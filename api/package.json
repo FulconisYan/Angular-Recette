@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "API REST for \"Cook From Web\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FulconisYan/angular-recipe.git"
+  },
+  "author": "Ivo COSTA CUNHA and Yan Fulconis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FulconisYan/angular-recipe/issues"
+  },
+  "homepage": "https://github.com/FulconisYan/angular-recipe#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
