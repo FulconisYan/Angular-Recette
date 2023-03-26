@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "f0c21a82-99e4-4303-a836-cd78a70cde39",
+		"name": "Test-Recipe-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26569489"
+	},
+	"item": [
+		{
+			"name": "Get Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"new customer\",\r\n    \"age\": \"one age\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8091/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"new customer\",\r\n    \"age\": \"one age\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8091/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
