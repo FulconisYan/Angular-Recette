@@ -1,0 +1,143 @@
+openapi: 3.0.3
+info:
+  title: cook-from-web API documentation
+  description: This is Cook From Web API documentation.
+  termsOfService: https: //cook-from-web/api-terms/
+  contact:
+    email: cookfromweb-contact@gmail.com
+  license:
+    name: ISC license
+    url: https://www.isc.org/
+  version: 1.0.0
+servers:
+  - url: http://localhost:8091/api/v1
+  - url: https://cook-from-web/api/v1
+  
+
+tags:
+  - name: recipes
+    description: Manipulate recipes data
+
+  - name: user
+    description: Manipulate user data
+
+
+paths:
+  /recipes:
+    get:
+      tags:
+        - recipes
+      summary: Gets all the recipes
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/recipes'
+              application/xml:
+                schema:
+                  $ref: '#/components/schemas/recipes'
+              application/x-www-form-urlencoded:
+                schema:
+                  $ref: '#/components/schemas/recipes'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: Pet not found
+        '405':
+          description: Validation exception
+
+  /recipes/id:
+    get:
+      tags:
+        - recipes
+      summary: Find a recipe by id
+      parameters:
+        - name: id
+          in: query
+          description: id of the recipe
+          required: true
+          explode: true
+      responses:
+        '200':
+          description: successful operation
+          application/json:
+              schema:
+                $ref: '#/components/schemas/recipe'
+              application/xml:
+                schema:
+                  $ref: '#/components/schemas/recipe'
+              application/x-www-form-urlencoded:
+                schema:
+                  $ref: '#/components/schemas/recipe'
+        '400':
+          description: Invalid status value
+          
+components:
+  schemas:
+
+    recipe:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 10
+        preparation:
+          type: integer
+          format: int64
+          example: 175
+        ingredients:
+          $ref: '#/components/schemas/ingredients'
+        utils:
+            $ref: '#/components/schemas/utils'
+      xml:
+        name: recipe
+
+    ingredient:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          example: 100000
+        name:
+          type: string
+          example: Apple
+        season:
+          type: string
+          enum: [spring, summer, autumn, winter]
+          example: summer
+      xml:
+        name: ingredient
+    
+    util:
+        type: object
+        properties:
+        id:
+          type: integer
+          format: int64
+          example: 100000
+        name:
+          type: string
+          example: Apple
+        xml:
+            name: utils
+
+    
+    ingredients:
+        type: array
+        items: 
+            $ref: '#/components/schemas/ingredient'
+    
+    recipes:
+        type: array
+        items: 
+        $ref: '#/components/schemas/recipe'
+    
+    utils:
+    type: array
+        items: 
+        $ref: '#/components/schemas/utils'
+
