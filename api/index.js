@@ -32,6 +32,12 @@ if (process.env.NODE_ENV !== 'production') {
 const PORT = process.env.PORT || 8091;
 const CONNECTION = process.env.CONNECTION;
 
+  if (CONNECTION === 'undefined')
+  {
+    console.log('Please verify .env file');
+    process.exit(1);
+  }
+
 /************** GET ************************/
 
 app.get('/', (req, res) =>  {

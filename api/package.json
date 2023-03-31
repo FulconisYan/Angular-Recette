@@ -24,7 +24,7 @@
     "yamljs": "^0.3.0"
   },
   "devDependencies": {
-    "swagger-ui-express": "^4.6.2"
-    "mongoose": "^7.0.3",
+    "swagger-ui-express": "^4.6.2",
+    "mongoose": "^7.0.3"
   }
 }
