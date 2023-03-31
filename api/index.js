@@ -1,10 +1,20 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const yaml = require('yamljs');
 const dotenv = require('dotenv');
 const User = require('./models/user');
 
+// Swagger imports and conf file 
+const swaggerUI = require('swagger-ui-express');
+
 dotenv.config();
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+swaggerDoc = yaml.load('./swagger.yaml');
+
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDoc));
 
 /*
 When strict option is set to true , Mongoose will ensure that only the fields that are specified in your Schema will be saved in the database, 
@@ -18,9 +28,6 @@ mongoose.set('strictQuery', false);
 if (process.env.NODE_ENV !== 'production') {
   dotenv.config();
 }
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 const PORT = process.env.PORT || 8091;
 const CONNECTION = process.env.CONNECTION;
@@ -109,3 +116,12 @@ const start = async () => {
 };
 
 start();
+
+app.get('/api/v1/users', async (req, res) => {
+  const result = await User.find();
+  res.send({"users": result});
+});
+
+app.get('/api/v1/recipes', async (req, res) => {
+  res.send({id: 24});
+})
