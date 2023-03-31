@@ -1,8 +1,9 @@
 const mongoose = require ('mongoose');
 
 userSchema = new mongoose.Schema({
+    category : String,
     name : String,
-    age : String
+    season : String
 });
 
 module.exports = mongoose.model('User', userSchema);
