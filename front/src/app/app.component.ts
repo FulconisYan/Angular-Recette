@@ -8,8 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'front';
   users = [];
+  user = true;;
 
   getUserCount(){
+  }
+
+  hideApp(){
+    this.user = false;
   }
 }
 
