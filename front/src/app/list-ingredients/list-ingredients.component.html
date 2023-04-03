@@ -1,14 +1,8 @@
-<ul>
-  <li>
-      Ingrédient 1
-  </li>
-  <li>
-      Ingrédient 2
-  </li>
-  <li>
-      Ingrédient 3
-  </li>
-  <li>
-      Ingrédient 4
-  </li>>
-</ul>
+<div *ngIf="listIngredients">
+  <ul>
+      <li *ngFor="let ingredient of listIngredients">
+          {{ingredient}}
+      </li>
+    </ul>
+</div>
+

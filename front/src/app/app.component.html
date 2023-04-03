@@ -1,8 +1,16 @@
-<p *ngIf="user">
-  Accès au user :
-  <a (click)="hideApp()" routerLink="/user">
+<div>
+  <p *ngIf="user">
+    Acces to user :
+    <a (click)="hideApp()" routerLink="/user">
+      Ici
+    </a>
+  </p>
+</div>
+<div>
+  Acces to recipe page :
+  <a (click)="hideApp()" routerLink="/recipe">
     Ici
   </a>
-</p>
+</div>
 <router-outlet></router-outlet>
 

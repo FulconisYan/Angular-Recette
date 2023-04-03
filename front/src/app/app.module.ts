@@ -5,18 +5,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListIngredientsComponent } from './list-ingredients/list-ingredients.component';
 import { UserComponent } from './user/user.component';
 import { AppRoutingModule } from './app-routing.module';
+import { RecipeComponent } from './recipe/recipe.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ListIngredientsComponent,
-    UserComponent
+    UserComponent,
+    RecipeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
