@@ -7,6 +7,7 @@ import { UserComponent } from './user/user.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeComponent } from './recipe/recipe.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialDesignModule } from "./material-design/material-design.module"
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MaterialDesignModule
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
