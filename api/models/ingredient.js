@@ -1,9 +1,12 @@
-const mongoose = require ('mongoose');
+const mongoose = require('mongoose');
 
-userSchema = new mongoose.Schema({
-    category : String,
-    name : String,
-    season : String
+ingredientSchema = new mongoose.Schema({
+    _id: mongoose.Types.ObjectId,
+    __v: Number,
+    category: String,
+    name: String,
+    season: String,
+    pictures: [String]
 });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Ingredient', ingredientSchema);
