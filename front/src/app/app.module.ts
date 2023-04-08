@@ -7,7 +7,8 @@ import { UserComponent } from './user/user.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RecipeComponent } from './recipe/recipe.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialDesignModule } from "./material-design/material-design.module"
+import { MaterialDesignModule } from "./material-design/material-design.module";
+import { LoginComponent } from './login/login.component'
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { MaterialDesignModule } from "./material-design/material-design.module"
     AppComponent,
     ListIngredientsComponent,
     UserComponent,
-    RecipeComponent
+    RecipeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
