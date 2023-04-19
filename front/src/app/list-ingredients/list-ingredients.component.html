@@ -1,8 +1,9 @@
 <div *ngIf="listIngredients">
-  <ul>
-      <li *ngFor="let ingredient of listIngredients">
-          {{ingredient}}
-      </li>
-    </ul>
+  <mat-list *ngFor="let ingredient of listIngredients">
+      <mat-list-item>
+        {{ingredient}}
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
 </div>
 

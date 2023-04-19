@@ -1,7 +1,29 @@
-h1 {
+h1, h2{
   text-align: center;
 }
 
-img{
-  width: 100%;
+.image {
+  width: 600px;
+  margin-right: auto;
+  margin-left: auto;
 }
+
+.infoTime {
+  margin-top: 1%;
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.listeIngredients {
+  width: 600px;
+
+  margin-right: auto;
+  margin-left: auto;
+}
+
+

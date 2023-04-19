@@ -1,11 +1,15 @@
 <h1>Le gateau au Yahourt</h1>
-<img [src]="image" [alt]="imageTitle"/>
 
-<div>
-    <p><span> Temps de préparation : </span>
-    <span> Temps de cuisson :  </span>
-    <span> Difficulté : </span>
-    </p>
+<div class="grid">
+  <img class="image" [src]="image" [alt]="imageTitle"/>
+  <div class="infoTime">
+      <p><span> Temps de préparation : </span>
+      <span> Temps de cuisson :  </span>
+      <span> Difficulté : </span>
+      </p>
+  </div>
+  <h2> Liste des ingrédients </h2>
+  <div class="listeIngredients">
+  <list-ingredients></list-ingredients>
+  </div>
 </div>
-
-<list-ingredients></list-ingredients>

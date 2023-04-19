@@ -1,0 +1,31 @@
+<div class="flex">
+  <div class="m-auto">
+    <mat-card>
+      <mat-card-title>
+        Sign In
+      </mat-card-title>
+      <mat-divider></mat-divider>
+      <mat-card-subtitle>
+        Enter your email and your password to log in
+      </mat-card-subtitle>
+        <form action="">
+          <div class="container">
+            <div>
+              <mat-form-field>
+                <mat-label> Email </mat-label>
+                <input type="email" matInput>
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field>
+                <mat-label> Password </mat-label>
+                <input type="password" matInput>
+              </mat-form-field>
+            </div>
+            <button mat-raised-button color="primary"> Login </button>
+          </div>
+        </form>
+    </mat-card>
+  </div>
+</div>
+<body (beforeunload)="backButtonEvent()"></body>
