@@ -2,25 +2,12 @@
 <mat-toolbar class="flex justify-content-between" color="accent" >
   CookFromWeb
   <div class="example-button-container">
-    <button color="primary" mat-fab color="warn" aria-label="Example icon button with a home icon">
+    <button color="primary" routerLink="/card" mat-fab color="warn" aria-label="Example icon button with a home icon">
       <mat-icon>home</mat-icon>
     </button>
   </div>
-  <button color="blue" (click)="hideApp()" href="" mat-stroked-button routerLink="/login"> Login </button>
+  <button color="blue" href="" mat-stroked-button routerLink="/login"> Login </button>
 </mat-toolbar>
-
-<div  class="mainCard" *ngIf="user">
-  <mat-card (click)="hideApp()" routerLink="/recipe" class="example-card">
-    <img mat-card-image src="https://fr.rc-cdn.community.thermomix.com/recipeimage/2jtkhm65-92aa3-439180-cfcd2-cuh2k5ik/6b655d39-14df-428c-9536-24c0eb935c89/main/gateau-au-yaourt.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <h3>
-        Yoghurt Cake
-      </h3>
-    </mat-card-content>
-    <mat-card-actions>
-    </mat-card-actions>
-  </mat-card>
-</div>
 
 
 <router-outlet></router-outlet>

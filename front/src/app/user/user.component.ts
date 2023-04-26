@@ -20,7 +20,7 @@ export class UserComponent {
 
     }
 
-    ngOnInit() :void {
+    ngOnInit(): void {
       this.getUsers();
       console.log(this.users);
     }
